@@ -11,8 +11,9 @@ def main():
         print("4. Dance")
         print("5. Eat Ramen")
         print("6. Check Status")
-        print("7. Random Event")
-        print("8. Quit")
+        print("7. Energy Drink")
+        print("8. Random Event")
+        print("9. Quit")
 
         choice = input("Enter your choice: ")
 
@@ -29,8 +30,10 @@ def main():
         elif choice == "6":
             shinchan.check_status()
         elif choice == "7":
-            shinchan.random_event()
+            shinchan.drink_energy_drink()
         elif choice == "8":
+            shinchan.random_event()
+        elif choice == "9":
             print("Thanks for playing!")
             break
         else:
