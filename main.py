@@ -9,10 +9,11 @@ def main():
         print("2. Watch Action Kamen")
         print("3. Play with Shiro")
         print("4. Dance")
-        print("5. Eat Ramen")
-        print("6. Check Status")
-        print("7. Random Event")
-        print("8. Quit")
+        print("5. Go to Park")
+        print("6. Eat Ramen")
+        print("7. Check Status")
+        print("8. Random Event")
+        print("9. Quit")
 
         choice = input("Enter your choice: ")
 
@@ -25,12 +26,14 @@ def main():
         elif choice == "4":
             shinchan.dance()
         elif choice == "5":
-            shinchan.eat_ramen()
+            shinchan.go_to_park()
         elif choice == "6":
-            shinchan.check_status()
+            shinchan.eat_ramen()
         elif choice == "7":
-            shinchan.random_event()
+            shinchan.check_status()
         elif choice == "8":
+            shinchan.random_event()
+        elif choice == "9":
             print("Thanks for playing!")
             break
         else:
