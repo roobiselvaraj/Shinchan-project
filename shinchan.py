@@ -100,3 +100,13 @@ class Shinchan:
         elif self.stamina < 0:
             self.stamina = 0
         print(f"\nEvent: {event} Stamina is now {self.stamina}.")
+    def play_video_games(self): #New Function added
+        if self.stamina >= 30:
+            self.stamina -= 30
+            self.score += 20
+            print(f"\n{self.name} is playing video games! Stamina is now {self.stamina}.")
+            print(f"Score: {self.score}")
+        else:
+            print(f"\n{self.name} is too tired to play video games.")
+        self.check_for_food()    
+        
