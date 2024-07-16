@@ -52,7 +52,12 @@ class Shinchan:
         else:
             self.stamina = 100
         print(f"\n{self.name} ate some ramen! Stamina is now {self.stamina}.")
-
+    def drink_energy_drink(self):
+        if self.stamina <= 50:
+            self.stamina += 30
+        else:
+            self.stamina = 100  
+        print(f"\n{self.name} drank an energy drink! Stamina is now {self.stamina}.")
     def rest(self):
         print(f"\n{self.name} is taking a rest to recover stamina.")
         self.stamina += 20
