@@ -45,16 +45,16 @@ class Shinchan:
         else:
             print(f"\n{self.name} is too tired to dance.")
         self.check_for_food()
-
-     def go_to_park(self):
-         if self.stamina >= 25:
-             self.stamina -= 25
-             self.score += 30
-             print(f"\n{self.name} is going to the park! Stamina is now {self.stamina}.")
-             print(f"Score: {self.score}")
-        else:
-            print(f"\n{self.name} is too tired to go to the park.")
-            self.check_for_food()
+        
+        def go_to_park(self):
+            if self.stamina >= 25:
+                self.stamina -= 25
+                self.score += 30
+                print(f"\n{self.name} is going to the park! Stamina is now {self.stamina}.")
+                print(f"Score: {self.score}")
+            else:
+                print(f"\n{self.name} is too tired to go to the park.")
+                self.check_for_food()
 
     def eat_ramen(self):
         if self.stamina <= 80:
@@ -62,12 +62,14 @@ class Shinchan:
         else:
             self.stamina = 100
         print(f"\n{self.name} ate some ramen! Stamina is now {self.stamina}.")
-    def drink_energy_drink(self):
-        if self.stamina <= 50:
-            self.stamina += 30
-        else:
-            self.stamina = 100  
-        print(f"\n{self.name} drank an energy drink! Stamina is now {self.stamina}.")
+        
+        def drink_energy_drink(self):
+            if self.stamina <= 50:
+                self.stamina += 30
+            else:
+                self.stamina = 100
+                print(f"\n{self.name} drank an energy drink! Stamina is now {self.stamina}.")
+                
     def rest(self):
         print(f"\n{self.name} is taking a rest to recover stamina.")
         self.stamina += 20
