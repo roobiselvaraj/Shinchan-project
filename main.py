@@ -14,7 +14,8 @@ def main():
         print("7. Energy Drink")
         print("8. Random Event")
         print("9. play_video_games") #To View the New function
-        print("10. Quit")
+        print("10. go to school")
+        print("11. Quit")
 
         choice = input("Enter your choice: ")
 
@@ -37,6 +38,8 @@ def main():
         elif choice == "9":
             shinchan.play_video_games()  #Calling function
         elif choice == "10":
+            shinchan.go_to_school()            # New feature: Go to Park
+        elif choice == "11":
             print("Thanks for playing!")
             break
         else:
