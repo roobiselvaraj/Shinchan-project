@@ -111,4 +111,4 @@ class Shinchan:
             print(f"Score: {self.score}")
         else:
             print(f"\n{self.name} is too tired to play video games.")
-        self.check_for_food()
+       
