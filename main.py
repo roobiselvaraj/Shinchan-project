@@ -1,23 +1,22 @@
 from shinchan import Shinchan
 
+def welcome_message():
+    choices = ["Play with Nani", "Watch Action Kamen", "Play with Shiro", "Dance", \
+               "Eat Ramen", "Check Status", "Energy Drink", "Random Event"\
+                , "Play video games", "Quit"]
+    print("Welcome to Shinchan's World")
+    print("These are the activities that you can do here!!")
+    for i in range(len(choices)):
+        print(f'{i+1}  - {choices[i]}')
+
+    choice = input("Choose one options (Specify the number):")
+    return choice
+    
+shinchan = Shinchan("shinchan")
+
 def main():
-    shinchan = Shinchan("Shinchan")
-
     while True:
-        print("\nChoose an activity:")
-        print("1. Play with Nani")
-        print("2. Watch Action Kamen")
-        print("3. Play with Shiro")
-        print("4. Dance")
-        print("5. Eat Ramen")
-        print("6. Check Status")
-        print("7. Energy Drink")
-        print("8. Random Event")
-        print("9. play_video_games") #To View the New function
-        print("10. Quit")
-
-        choice = input("Enter your choice: ")
-
+        choice = welcome_message()
         if choice == "1":
             shinchan.play_with_nani()
         elif choice == "2":
@@ -41,6 +40,10 @@ def main():
             break
         else:
             print("Invalid choice. Please try again.")
+        loop = input("Do you want to try out any other activities? (yes/no)")
+        if loop.strip().lower() != 'yes':
+            break
+        
 
 if __name__ == "__main__":
     main()
